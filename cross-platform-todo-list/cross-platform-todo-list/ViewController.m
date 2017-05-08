@@ -14,13 +14,13 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *viewContainer;
 @property(strong, nonatomic) FIRDatabaseReference *userReference;
 @property(strong, nonatomic) FIRUser *currentUser;
-
 @property(nonatomic) FIRDatabaseHandle allTodosHandler;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *hideUnhideButton;
-
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *addTodoTopConstraint;
+@property (weak, nonatomic) NSMutableArray *allTodos;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewControllerHeightConstraint;
 
 @end
 
@@ -28,7 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.addTodoTopConstraint.constant = -250;
+    self.viewContainer.hidden = YES;
+    self.viewControllerHeightConstraint.constant = 0;
 
 }
 
@@ -92,13 +93,17 @@
 
 
 - (IBAction)hideUnhidePressed:(id)sender {
-    if (self.addTodoTopConstraint.constant == -250) {
-        self.addTodoTopConstraint.constant = 0;
+    
+    if (self.viewContainer.hidden == YES) {
+        self.viewContainer.hidden = NO;
         self.hideUnhideButton.title = @"-";
-    } else if (self.addTodoTopConstraint.constant ==0) {
-        self.addTodoTopConstraint.constant = -250;
+        self.viewControllerHeightConstraint.constant = 150;
+    } else if (self.viewContainer.hidden == NO) {
+        self.viewContainer.hidden = YES;
         self.hideUnhideButton.title = @"+";
+        self.viewControllerHeightConstraint.constant = 0;
     }
+
 }
 
 

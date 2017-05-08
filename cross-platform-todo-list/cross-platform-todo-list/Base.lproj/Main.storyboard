@@ -32,11 +32,29 @@
                                     <segue destination="5tR-sk-7Lc" kind="embed" id="IBF-4g-eFu"/>
                                 </connections>
                             </containerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0gY-eZ-SYI">
+                                <rect key="frame" x="0.0" y="214" width="375" height="453"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" id="myS-Ad-PuB">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="myS-Ad-PuB" id="FaT-f0-mR2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="08R-Bs-Ku1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="41s-mu-dHo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0gY-eZ-SYI" secondAttribute="bottom" id="HkM-Kv-5U7"/>
+                            <constraint firstItem="0gY-eZ-SYI" firstAttribute="top" secondItem="08R-Bs-Ku1" secondAttribute="bottom" id="Oe5-Qp-6os"/>
+                            <constraint firstAttribute="trailing" secondItem="0gY-eZ-SYI" secondAttribute="trailing" id="eUP-af-hAS"/>
                             <constraint firstAttribute="trailing" secondItem="08R-Bs-Ku1" secondAttribute="trailing" id="qv3-fx-N6o"/>
+                            <constraint firstItem="0gY-eZ-SYI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sN7-uK-Q9d"/>
                             <constraint firstItem="08R-Bs-Ku1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xEg-Zl-xfQ"/>
                         </constraints>
                     </view>
@@ -53,8 +71,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addTodoTopConstraint" destination="xEg-Zl-xfQ" id="lIW-ab-4JF"/>
                         <outlet property="hideUnhideButton" destination="pZm-8J-axJ" id="eAl-jF-F8K"/>
+                        <outlet property="viewContainer" destination="08R-Bs-Ku1" id="eU8-0S-5v7"/>
+                        <outlet property="viewControllerHeightConstraint" destination="AIR-TZ-sN4" id="iPJ-O8-dzA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -181,7 +200,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Todo details" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="31b-Qk-QdQ">
                                 <rect key="frame" x="16" y="77" width="343" height="30"/>
                                 <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOS-sV-oL8">
                                 <rect key="frame" x="0.0" y="115" width="376" height="35"/>
