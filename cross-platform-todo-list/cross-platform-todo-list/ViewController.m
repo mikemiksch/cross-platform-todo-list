@@ -18,6 +18,9 @@
 @property(strong, nonatomic) FIRUser *currentUser;
 
 @property(nonatomic) FIRDatabaseHandle allTodosHandler;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *hideUnhideButton;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *addTodoTopConstraint;
 
 @end
 
@@ -25,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.addTodoTopConstraint.constant = -250;
 
 }
 
@@ -87,6 +91,15 @@
 }
 
 
+- (IBAction)hideUnhidePressed:(id)sender {
+    if (self.addTodoTopConstraint.constant == -250) {
+        self.addTodoTopConstraint.constant = 0;
+        self.hideUnhideButton.title = @"-";
+    } else if (self.addTodoTopConstraint.constant ==0) {
+        self.addTodoTopConstraint.constant = -250;
+        self.hideUnhideButton.title = @"+";
+    }
+}
 
 
 @end

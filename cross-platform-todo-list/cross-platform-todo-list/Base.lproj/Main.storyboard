@@ -36,8 +36,8 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="08R-Bs-Ku1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="41s-mu-dHo"/>
-                            <constraint firstItem="08R-Bs-Ku1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Abd-bp-jBx"/>
                             <constraint firstAttribute="trailing" secondItem="08R-Bs-Ku1" secondAttribute="trailing" id="qv3-fx-N6o"/>
+                            <constraint firstItem="08R-Bs-Ku1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xEg-Zl-xfQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Todo List" id="BzJ-77-b3c">
@@ -46,7 +46,16 @@
                                 <action selector="logOutPressed:" destination="BYZ-38-t0r" id="lKn-Vu-WuL"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="pZm-8J-axJ">
+                            <connections>
+                                <action selector="hideUnhidePressed:" destination="BYZ-38-t0r" id="Jgk-vF-IaM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addTodoTopConstraint" destination="xEg-Zl-xfQ" id="lIW-ab-4JF"/>
+                        <outlet property="hideUnhideButton" destination="pZm-8J-axJ" id="eAl-jF-F8K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,6 +159,10 @@
         <scene sceneID="vfp-0q-ZG9">
             <objects>
                 <viewController id="5tR-sk-7Lc" customClass="NewTodoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5SF-QY-dki"/>
+                        <viewControllerLayoutGuide type="bottom" id="L4k-va-iJC"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6op-tj-EIf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
