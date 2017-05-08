@@ -81,7 +81,9 @@
 }
 
 - (IBAction)logOutPressed:(id)sender {
-    ![[FIRAuth auth] currentUser];
+    NSError *signOutError;
+    [[FIRAuth auth] signOut:&signOutError];
+    [self checkUserStatus];
 }
 
 
