@@ -72,6 +72,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="hideUnhideButton" destination="pZm-8J-axJ" id="eAl-jF-F8K"/>
+                        <outlet property="todoTableView" destination="0gY-eZ-SYI" id="36u-1l-Pcb"/>
                         <outlet property="viewContainer" destination="08R-Bs-Ku1" id="eU8-0S-5v7"/>
                         <outlet property="viewControllerHeightConstraint" destination="AIR-TZ-sN4" id="iPJ-O8-dzA"/>
                     </connections>
@@ -106,7 +107,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kWp-V6-V0T">
                                 <rect key="frame" x="94" y="168" width="188" height="30"/>
                                 <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmE-u1-T66">
                                 <rect key="frame" x="94" y="228" width="84.5" height="30"/>
@@ -200,7 +201,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Todo details" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="31b-Qk-QdQ">
                                 <rect key="frame" x="16" y="77" width="343" height="30"/>
                                 <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOS-sV-oL8">
                                 <rect key="frame" x="0.0" y="115" width="376" height="35"/>
