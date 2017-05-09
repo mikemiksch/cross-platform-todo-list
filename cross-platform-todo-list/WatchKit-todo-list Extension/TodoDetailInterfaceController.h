@@ -1,5 +1,5 @@
 //
-//  TodoDetailController.h
+//  TodoDetailInterfaceController.h
 //  cross-platform-todo-list
 //
 //  Created by Mike Miksch on 5/9/17.
@@ -7,10 +7,13 @@
 //
 
 #import <WatchKit/WatchKit.h>
-//#import "InterfaceController.h"
+#import <Foundation/Foundation.h>
+#import "TodoItem.h"
 
-@interface TodoDetailController : WKInterfaceController
+@interface TodoDetailInterfaceController : WKInterfaceController
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *titleLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *contentLabel;
+
+@property (strong, nonatomic) TodoItem *selectedItem;
 
 @end

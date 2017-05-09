@@ -16,13 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.titleLabel.text = self.selectedItem.title;
+    self.titleLabel.text = self.selectedItem.content;
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 - (IBAction)completedPressed:(id)sender {
 }
 

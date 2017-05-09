@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tvTableView.dataSource = self;
-//    self.tvTableView.delegate = self;
+    self.tvTableView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,9 +60,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     TVTodoDetailViewController *detailController = [[TVTodoDetailViewController alloc]init];
-    detailController.titleLabel.text = self.allTodos[indexPath.row].title;
-    detailController.contentLabel.text = self.allTodos[indexPath.row].content;
-//    [self presentViewController:detailController animated:YES completion:nil];
+    TodoItem *selectedItem = self.allTodos[indexPath.row];
+    NSLog(@"You've selected an item! %@", selectedItem.title);
+    detailController.selectedItem = selectedItem;
+//    [self.navigationController pushViewController:detailController animated:YES];
 }
 
 @end

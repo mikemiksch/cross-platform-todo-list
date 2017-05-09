@@ -50,7 +50,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="F3h-hm-l5d" kind="show" id="4nG-9u-37q"/>
+                                            <segue destination="F3h-hm-l5d" kind="show" id="Wrh-JT-LNN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -33,10 +33,10 @@
 		83C4515E1EC246C20027F552 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C4515D1EC246C20027F552 /* Assets.xcassets */; };
 		83C451651EC248B50027F552 /* TVHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C451641EC248B50027F552 /* TVHomeViewController.m */; };
 		83C451661EC249C10027F552 /* TodoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 83245D311EC12DBB0035219C /* TodoItem.m */; };
-		83C4516C1EC25A5C0027F552 /* TodoDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C4516B1EC25A5C0027F552 /* TodoDetailController.m */; };
 		83C451721EC25EF70027F552 /* TVTodoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C451711EC25EF70027F552 /* TVTodoDetailViewController.m */; };
 		83C451751EC264220027F552 /* CompletedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C451741EC264220027F552 /* CompletedViewController.m */; };
 		83C451781EC2642E0027F552 /* TodoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C451771EC2642E0027F552 /* TodoDetailViewController.m */; };
+		83C4517B1EC2763C0027F552 /* TodoDetailInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C4517A1EC2763C0027F552 /* TodoDetailInterfaceController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,14 +122,14 @@
 		83C4515F1EC246C20027F552 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83C451631EC248B50027F552 /* TVHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVHomeViewController.h; sourceTree = "<group>"; };
 		83C451641EC248B50027F552 /* TVHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVHomeViewController.m; sourceTree = "<group>"; };
-		83C4516A1EC25A5C0027F552 /* TodoDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoDetailController.h; sourceTree = "<group>"; };
-		83C4516B1EC25A5C0027F552 /* TodoDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoDetailController.m; sourceTree = "<group>"; };
 		83C451701EC25EF70027F552 /* TVTodoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVTodoDetailViewController.h; sourceTree = "<group>"; };
 		83C451711EC25EF70027F552 /* TVTodoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVTodoDetailViewController.m; sourceTree = "<group>"; };
 		83C451731EC264220027F552 /* CompletedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedViewController.h; sourceTree = "<group>"; };
 		83C451741EC264220027F552 /* CompletedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedViewController.m; sourceTree = "<group>"; };
 		83C451761EC2642E0027F552 /* TodoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoDetailViewController.h; sourceTree = "<group>"; };
 		83C451771EC2642E0027F552 /* TodoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoDetailViewController.m; sourceTree = "<group>"; };
+		83C451791EC2763C0027F552 /* TodoDetailInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoDetailInterfaceController.h; sourceTree = "<group>"; };
+		83C4517A1EC2763C0027F552 /* TodoDetailInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoDetailInterfaceController.m; sourceTree = "<group>"; };
 		E9DF7B55F11B25584BD03CA9 /* Pods-cross-platform-todo-list.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cross-platform-todo-list.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cross-platform-todo-list/Pods-cross-platform-todo-list.debug.xcconfig"; sourceTree = "<group>"; };
 		EEE75C8BEC901DCC7EA5F3AC /* libPods-cross-platform-todo-list.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cross-platform-todo-list.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -277,12 +277,12 @@
 				83C451371EC233AB0027F552 /* ExtensionDelegate.m */,
 				83C451331EC233AB0027F552 /* InterfaceController.h */,
 				83C451341EC233AB0027F552 /* InterfaceController.m */,
-				83C4516A1EC25A5C0027F552 /* TodoDetailController.h */,
-				83C4516B1EC25A5C0027F552 /* TodoDetailController.m */,
 				83C451471EC23F3D0027F552 /* TodoRowController.h */,
 				83C451481EC23F3D0027F552 /* TodoRowController.m */,
 				83C451391EC233AB0027F552 /* Assets.xcassets */,
 				83C4513B1EC233AB0027F552 /* Info.plist */,
+				83C451791EC2763C0027F552 /* TodoDetailInterfaceController.h */,
+				83C4517A1EC2763C0027F552 /* TodoDetailInterfaceController.m */,
 			);
 			path = "WatchKit-todo-list Extension";
 			sourceTree = "<group>";
@@ -548,8 +548,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83C4517B1EC2763C0027F552 /* TodoDetailInterfaceController.m in Sources */,
 				83C451381EC233AB0027F552 /* ExtensionDelegate.m in Sources */,
-				83C4516C1EC25A5C0027F552 /* TodoDetailController.m in Sources */,
 				83C451351EC233AB0027F552 /* InterfaceController.m in Sources */,
 				83C4514A1EC242710027F552 /* TodoItem.m in Sources */,
 				83C451491EC23F3D0027F552 /* TodoRowController.m in Sources */,

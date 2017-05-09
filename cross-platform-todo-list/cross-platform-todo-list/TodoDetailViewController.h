@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TodoItem.h"
 
 @interface TodoDetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
-
+@property (weak, nonatomic) TodoItem *selectedItem;
 @end

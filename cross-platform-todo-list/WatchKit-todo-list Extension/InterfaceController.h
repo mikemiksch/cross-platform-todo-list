@@ -8,7 +8,7 @@
 
 #import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
-#import "TodoDetailController.h"
+#import "TodoDetailInterfaceController.h"
 
 @interface InterfaceController : WKInterfaceController
 

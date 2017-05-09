@@ -136,10 +136,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     TodoDetailViewController *detailController = [[TodoDetailViewController alloc]init];
     TodoItem *selectedItem = self.allTodos[indexPath.row];
-    detailController.titleLabel.text = selectedItem.title;
-    detailController.contentLabel.text = selectedItem.content;
-    [self presentViewController:detailController animated:YES completion:nil];
+    detailController.selectedItem = selectedItem;
+    [self.navigationController pushViewController:detailController animated:YES];
+
 }
-
-
 @end
