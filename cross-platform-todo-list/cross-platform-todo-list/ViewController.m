@@ -31,7 +31,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.viewContainer.hidden = YES;
     self.viewControllerHeightConstraint.constant = 0;
     self.todoTableView.delegate = self;
     self.todoTableView.dataSource = self;
@@ -105,14 +104,18 @@
 
 - (IBAction)hideUnhidePressed:(id)sender {
     
-    if (self.viewContainer.hidden == YES) {
-        self.viewContainer.hidden = NO;
+    if (self.viewControllerHeightConstraint.constant == 0) {
         self.hideUnhideButton.title = @"-";
         self.viewControllerHeightConstraint.constant = 150;
-    } else if (self.viewContainer.hidden == NO) {
-        self.viewContainer.hidden = YES;
+        [UIView animateWithDuration:0.5 animations:^{
+            [self.view layoutIfNeeded];
+        }];
+    } else if (self.viewControllerHeightConstraint.constant == 150) {
         self.hideUnhideButton.title = @"+";
         self.viewControllerHeightConstraint.constant = 0;
+        [UIView animateWithDuration:0.5 animations:^{
+            [self.view layoutIfNeeded];
+        }];
     }
 
 }
