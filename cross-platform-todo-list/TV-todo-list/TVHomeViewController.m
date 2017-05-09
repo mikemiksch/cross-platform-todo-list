@@ -8,6 +8,7 @@
 
 #import "TVHomeViewController.h"
 #import "TodoItem.h"
+#import "TVTodoDetailViewController.h"
 
 @interface TVHomeViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -22,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tvTableView.dataSource = self;
+//    self.tvTableView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,7 +59,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    TVTodoDetailViewController *detailController = [[TVTodoDetailViewController alloc]init];
+    detailController.titleLabel.text = self.allTodos[indexPath.row].title;
+    detailController.contentLabel.text = self.allTodos[indexPath.row].content;
+//    [self presentViewController:detailController animated:YES completion:nil];
 }
 
 @end

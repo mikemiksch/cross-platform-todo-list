@@ -10,6 +10,7 @@
 #import "TodoItem.h"
 #import "TodoRowController.h"
 
+
 @interface InterfaceController ()
 
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *table;
@@ -69,6 +70,12 @@
 }
 
 - (void)table:(WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex {
+////    TodoItem *selectedItem = self.allTodos[rowIndex];
+////    [self pushControllerWithName:@"TodoDetailController" context:selectedItem];
+//    TodoDetailController *detailController = [[TodoDetailController alloc]init];
+//    [detailController.titleLabel setText:self.allTodos[rowIndex].title];
+//    [detailController.contentLabel setText:self.allTodos[rowIndex].title];
+    
     
 }
 

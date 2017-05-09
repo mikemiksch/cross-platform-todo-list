@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "LoginViewController.h"
 #import "TodoItem.h"
+#import "TodoDetailViewController.h"
 
 @import FirebaseAuth;
 @import Firebase;
@@ -130,6 +131,14 @@
     cell.textLabel.text = item.title;
     cell.detailTextLabel.text = item.content;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    TodoDetailViewController *detailController = [[TodoDetailViewController alloc]init];
+    TodoItem *selectedItem = self.allTodos[indexPath.row];
+    detailController.titleLabel.text = selectedItem.title;
+    detailController.contentLabel.text = selectedItem.content;
+    [self presentViewController:detailController animated:YES completion:nil];
 }
 
 

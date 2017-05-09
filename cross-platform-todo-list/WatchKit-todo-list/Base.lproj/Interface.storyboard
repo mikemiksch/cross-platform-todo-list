@@ -16,7 +16,7 @@
                     <items>
                         <table alignment="left" id="RAO-5A-UIb">
                             <items>
-                                <tableRow identifier="I" id="nFN-Aq-1Ye" customClass="TodoRowController">
+                                <tableRow identifier="TodoRowController" id="nFN-Aq-1Ye" customClass="TodoRowController">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="5eq-kx-3ii">
                                         <items>
                                             <label alignment="left" text="Title" id="tsH-3r-N2U">
@@ -24,6 +24,9 @@
                                             </label>
                                             <label alignment="left" text="Content" minimumScaleFactor="0.0" id="aB7-rP-9L3"/>
                                         </items>
+                                        <connections>
+                                            <segue destination="rTN-un-WdR" kind="push" id="xlQ-kB-6Ba"/>
+                                        </connections>
                                     </group>
                                     <connections>
                                         <outlet property="contentLabel" destination="aB7-rP-9L3" id="Ktr-Wy-eDY"/>
@@ -38,6 +41,24 @@
                     </connections>
                 </controller>
             </objects>
+        </scene>
+        <!--Todo Detail Controller-->
+        <scene sceneID="U3p-Ec-nVy">
+            <objects>
+                <controller id="rTN-un-WdR" customClass="TodoDetailController">
+                    <items>
+                        <label width="136" alignment="left" text="Title" textAlignment="center" id="VGR-ko-pCt">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label width="136" alignment="left" text="Content" numberOfLines="0" id="FkJ-Y6-omC"/>
+                    </items>
+                    <connections>
+                        <outlet property="contentLabel" destination="FkJ-Y6-omC" id="2Ul-at-aiR"/>
+                        <outlet property="titleLabel" destination="VGR-ko-pCt" id="M9h-FH-KWc"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="330" y="37"/>
         </scene>
     </scenes>
 </document>
