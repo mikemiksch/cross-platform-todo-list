@@ -125,6 +125,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableCell" forIndexPath:indexPath];
     TodoItem *item = [self.allTodos objectAtIndex: indexPath.row];
     cell.textLabel.text = item.title;
+    cell.detailTextLabel.text = item.content;
     return cell;
 }
 
