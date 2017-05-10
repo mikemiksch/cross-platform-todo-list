@@ -17,6 +17,7 @@
 		830A32451EC0DFD60082B146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 830A32441EC0DFD60082B146 /* GoogleService-Info.plist */; };
 		830A32481EC0EBBA0082B146 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830A32471EC0EBBA0082B146 /* LoginViewController.m */; };
 		830A324E1EC10E5C0082B146 /* NewTodoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830A324D1EC10E5C0082B146 /* NewTodoViewController.m */; };
+		83245D321EC12DBB0035219C /* TodoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 83245D311EC12DBB0035219C /* TodoItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		830A32471EC0EBBA0082B146 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		830A324C1EC10E5C0082B146 /* NewTodoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTodoViewController.h; sourceTree = "<group>"; };
 		830A324D1EC10E5C0082B146 /* NewTodoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTodoViewController.m; sourceTree = "<group>"; };
+		83245D301EC12DBB0035219C /* TodoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoItem.h; sourceTree = "<group>"; };
+		83245D311EC12DBB0035219C /* TodoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoItem.m; sourceTree = "<group>"; };
 		E9DF7B55F11B25584BD03CA9 /* Pods-cross-platform-todo-list.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cross-platform-todo-list.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cross-platform-todo-list/Pods-cross-platform-todo-list.debug.xcconfig"; sourceTree = "<group>"; };
 		EEE75C8BEC901DCC7EA5F3AC /* libPods-cross-platform-todo-list.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cross-platform-todo-list.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,6 +117,8 @@
 		830A32491EC0EBBF0082B146 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				83245D301EC12DBB0035219C /* TodoItem.h */,
+				83245D311EC12DBB0035219C /* TodoItem.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 				830A32351EC0DD810082B146 /* ViewController.m in Sources */,
 				830A32321EC0DD810082B146 /* AppDelegate.m in Sources */,
 				830A324E1EC10E5C0082B146 /* NewTodoViewController.m in Sources */,
+				83245D321EC12DBB0035219C /* TodoItem.m in Sources */,
 				830A322F1EC0DD810082B146 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
