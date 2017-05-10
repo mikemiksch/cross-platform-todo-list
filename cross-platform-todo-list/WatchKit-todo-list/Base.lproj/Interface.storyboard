@@ -42,10 +42,10 @@
                 </controller>
             </objects>
         </scene>
-        <!--Todo Detail Interface Controller-->
+        <!--TodoDetailInterfaceController-->
         <scene sceneID="U3p-Ec-nVy">
             <objects>
-                <controller id="rTN-un-WdR" customClass="TodoDetailInterfaceController">
+                <controller identifier="TodoDetailInterfaceController" id="rTN-un-WdR" customClass="TodoDetailInterfaceController">
                     <items>
                         <label width="136" alignment="left" text="Title" textAlignment="center" id="VGR-ko-pCt">
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
@@ -53,8 +53,8 @@
                         <label width="136" alignment="left" text="Content" numberOfLines="0" id="FkJ-Y6-omC"/>
                     </items>
                     <connections>
-                        <outlet property="contentLabel" destination="FkJ-Y6-omC" id="WI1-sw-K9O"/>
-                        <outlet property="titleLabel" destination="VGR-ko-pCt" id="022-iZ-0Oc"/>
+                        <outlet property="contentLabel" destination="FkJ-Y6-omC" id="Ccd-tv-Hgx"/>
+                        <outlet property="titleLabel" destination="VGR-ko-pCt" id="H4U-En-VLl"/>
                     </connections>
                 </controller>
             </objects>

@@ -25,16 +25,13 @@
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     [self setupTable];
-    NSLog(@"%@", self.allTodos);
     // Configure interface objects here.
 }
 
 - (void)setupTable {
-    NSLog(@"setupTable method has fired");
     [self.table setNumberOfRows:self.allTodos.count withRowType:@"TodoRowController"];
     
     for (NSInteger i = 0; i < self.allTodos.count; i++) {
-        NSLog(@"Hit for loop");
         TodoRowController *rowController = [self.table rowControllerAtIndex:i];
         
         [rowController.titleLabel setText:self.allTodos[i].title];
@@ -70,10 +67,8 @@
 }
 
 - (void)table:(WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex {
-//    TodoDetailInterfaceController *detailController = [[TodoDetailInterfaceController alloc]init];
-    TodoItem *selectedItem = self.allTodos[rowIndex];
-//    detailController.selectedItem = selectedItem;
-    [self pushControllerWithName:@"TodoDetailInterfaceController" context:selectedItem];
+    NSDictionary *currentTodoDetails = @{@"title":self.allTodos[rowIndex].title, @"content":self.allTodos[rowIndex].content};
+    [self pushControllerWithName:@"TodoDetailInterfaceController" context:currentTodoDetails];
     
 }
 

@@ -11,8 +11,6 @@
 #import "TodoItem.h"
 
 @interface TodoDetailInterfaceController : WKInterfaceController
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *titleLabel;
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *contentLabel;
 
 @property (strong, nonatomic) TodoItem *selectedItem;
 

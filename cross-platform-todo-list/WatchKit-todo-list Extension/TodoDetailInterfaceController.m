@@ -10,16 +10,18 @@
 
 @interface TodoDetailInterfaceController ()
 
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *titleLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *contentLabel;
+
 @end
 
 @implementation TodoDetailInterfaceController
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-    self.selectedItem = context;
-    NSLog(@"Detail interface controller loaded with this: %@", self.selectedItem.title);
-    [self.titleLabel setText:self.selectedItem.title];
-    [self.contentLabel setText:self.selectedItem.content];
+    NSLog(@"%@", context);
+    [self.titleLabel setText:context[@"title"]];
+    [self.contentLabel setText:context[@"content"]];
     
     // Configure interface objects here.
 }
