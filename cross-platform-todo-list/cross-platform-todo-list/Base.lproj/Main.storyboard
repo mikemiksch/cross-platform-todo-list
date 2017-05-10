@@ -146,6 +146,20 @@
                                     <action selector="signUpPressed:" destination="FPC-u9-EgL" eventType="touchUpInside" id="cpQ-o6-1Nu"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aS9-aN-Hyi">
+                                <rect key="frame" x="167" y="293" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8G-FA-dgY">
+                                <rect key="frame" x="166" y="292" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -167,7 +181,9 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="ai7-cQ-idl" id="5zR-My-lEd"/>
+                        <outlet property="loginErrorLabel" destination="aS9-aN-Hyi" id="BDH-JT-olf"/>
                         <outlet property="passwordTextField" destination="kWp-V6-V0T" id="M5i-OI-PET"/>
+                        <outlet property="signupSuccessLabel" destination="u8G-FA-dgY" id="UKD-jp-KPR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZT7-Dh-pIu" userLabel="First Responder" sceneMemberID="firstResponder"/>
