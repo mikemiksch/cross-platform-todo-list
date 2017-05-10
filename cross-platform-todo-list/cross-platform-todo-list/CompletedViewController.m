@@ -28,12 +28,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.completedTableView.dataSource = self;
+    [self setupFirebase];
+    [self startMonitoringTodoUpdates];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    [self setupFirebase];
-    [self startMonitoringTodoUpdates];
+
 }
 
 
@@ -58,6 +59,7 @@
             NSNumber *todoCompleted = todoData[@"completed"];
             
             if (todoCompleted.integerValue == 1) {
+                NSLog(@"Looping through completed items");
                 TodoItem *currentTodo = [[TodoItem alloc]init];
                 currentTodo.title = todoTitle;
                 currentTodo.content = todoContent;
