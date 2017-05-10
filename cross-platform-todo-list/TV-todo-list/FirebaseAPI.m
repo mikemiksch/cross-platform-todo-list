@@ -41,7 +41,16 @@
         }
         
         if (completion) {
-            completion(allTodos);
+            
+            // This does the same thing as the code below.
+//            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//                completion(allTodos);
+//            }];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(allTodos);
+            });
+
         }
         
     }]resume];
