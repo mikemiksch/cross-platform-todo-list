@@ -79,19 +79,21 @@
             
             NSString *todoTitle = todoData[@"title"];
             NSString *todoContent = todoData[@"content"];
+            NSString *todoKey = todoData[@"key"];
+            NSNumber *todoCompleted = todoData[@"completed"];
             
-            TodoItem *newTodoItem = [[TodoItem alloc] init];
-            newTodoItem.title = todoTitle;
-            newTodoItem.content = todoContent;
             
-            [self.allTodos addObject:newTodoItem];
-            [self.todoTableView reloadData];
+            if (todoCompleted.integerValue == 0){
+                TodoItem *newTodoItem = [[TodoItem alloc] init];
+                newTodoItem.title = todoTitle;
+                newTodoItem.content = todoContent;
+                newTodoItem.key = todoKey;
             
-            NSLog(@"Here's the new todo item: %@", newTodoItem);
-            
-            NSLog(@"Todo Title: %@ - Content: %@", todoTitle, todoContent);
+                [self.allTodos addObject:newTodoItem];
+            }
             
         }
+        [self.todoTableView reloadData];
         
     }];
 }
