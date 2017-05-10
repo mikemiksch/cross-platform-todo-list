@@ -274,16 +274,8 @@
 		83C451321EC233AB0027F552 /* WatchKit-todo-list Extension */ = {
 			isa = PBXGroup;
 			children = (
-				83C451361EC233AB0027F552 /* ExtensionDelegate.h */,
-				83C451371EC233AB0027F552 /* ExtensionDelegate.m */,
-				83C451331EC233AB0027F552 /* InterfaceController.h */,
-				83C451341EC233AB0027F552 /* InterfaceController.m */,
-				83C451471EC23F3D0027F552 /* TodoRowController.h */,
-				83C451481EC23F3D0027F552 /* TodoRowController.m */,
-				83C451391EC233AB0027F552 /* Assets.xcassets */,
-				83C4513B1EC233AB0027F552 /* Info.plist */,
-				83C451791EC2763C0027F552 /* TodoDetailInterfaceController.h */,
-				83C4517A1EC2763C0027F552 /* TodoDetailInterfaceController.m */,
+				83C451881EC3C7700027F552 /* Controller */,
+				83C451871EC3C7680027F552 /* Support */,
 			);
 			path = "WatchKit-todo-list Extension";
 			sourceTree = "<group>";
@@ -291,17 +283,10 @@
 		83C451501EC246C20027F552 /* TV-todo-list */ = {
 			isa = PBXGroup;
 			children = (
-				83C451631EC248B50027F552 /* TVHomeViewController.h */,
-				83C451641EC248B50027F552 /* TVHomeViewController.m */,
-				83C451541EC246C20027F552 /* AppDelegate.h */,
-				83C451551EC246C20027F552 /* AppDelegate.m */,
-				83C4515A1EC246C20027F552 /* Main.storyboard */,
-				83C451701EC25EF70027F552 /* TVTodoDetailViewController.h */,
-				83C451711EC25EF70027F552 /* TVTodoDetailViewController.m */,
-				83C4515D1EC246C20027F552 /* Assets.xcassets */,
-				83C4515F1EC246C20027F552 /* Info.plist */,
+				83C4518D1EC3C7B80027F552 /* Model */,
+				83C4518C1EC3C7B00027F552 /* View */,
+				83C4518B1EC3C7A30027F552 /* Controller */,
 				83C451511EC246C20027F552 /* Supporting Files */,
-				83C4517C1EC382A40027F552 /* Credentials.h */,
 			);
 			path = "TV-todo-list";
 			sourceTree = "<group>";
@@ -309,9 +294,64 @@
 		83C451511EC246C20027F552 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				83C4517C1EC382A40027F552 /* Credentials.h */,
+				83C451541EC246C20027F552 /* AppDelegate.h */,
+				83C451551EC246C20027F552 /* AppDelegate.m */,
+				83C4515D1EC246C20027F552 /* Assets.xcassets */,
+				83C4515F1EC246C20027F552 /* Info.plist */,
 				83C451521EC246C20027F552 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83C451871EC3C7680027F552 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				83C451361EC233AB0027F552 /* ExtensionDelegate.h */,
+				83C451371EC233AB0027F552 /* ExtensionDelegate.m */,
+				83C451391EC233AB0027F552 /* Assets.xcassets */,
+				83C4513B1EC233AB0027F552 /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		83C451881EC3C7700027F552 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				83C451331EC233AB0027F552 /* InterfaceController.h */,
+				83C451341EC233AB0027F552 /* InterfaceController.m */,
+				83C451791EC2763C0027F552 /* TodoDetailInterfaceController.h */,
+				83C4517A1EC2763C0027F552 /* TodoDetailInterfaceController.m */,
+				83C451471EC23F3D0027F552 /* TodoRowController.h */,
+				83C451481EC23F3D0027F552 /* TodoRowController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		83C4518B1EC3C7A30027F552 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				83C451631EC248B50027F552 /* TVHomeViewController.h */,
+				83C451641EC248B50027F552 /* TVHomeViewController.m */,
+				83C451701EC25EF70027F552 /* TVTodoDetailViewController.h */,
+				83C451711EC25EF70027F552 /* TVTodoDetailViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		83C4518C1EC3C7B00027F552 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83C4515A1EC246C20027F552 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		83C4518D1EC3C7B80027F552 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -863,6 +903,7 @@
 				83C451421EC233AB0027F552 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83C451451EC233AB0027F552 /* Build configuration list for PBXNativeTarget "WatchKit-todo-list" */ = {
 			isa = XCConfigurationList;
@@ -871,6 +912,7 @@
 				83C451401EC233AB0027F552 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83C451601EC246C20027F552 /* Build configuration list for PBXNativeTarget "TV-todo-list" */ = {
 			isa = XCConfigurationList;
@@ -879,6 +921,7 @@
 				83C451621EC246C20027F552 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
