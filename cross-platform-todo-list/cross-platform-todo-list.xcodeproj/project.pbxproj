@@ -130,6 +130,7 @@
 		83C451771EC2642E0027F552 /* TodoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoDetailViewController.m; sourceTree = "<group>"; };
 		83C451791EC2763C0027F552 /* TodoDetailInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoDetailInterfaceController.h; sourceTree = "<group>"; };
 		83C4517A1EC2763C0027F552 /* TodoDetailInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoDetailInterfaceController.m; sourceTree = "<group>"; };
+		83C4517C1EC382A40027F552 /* Credentials.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Credentials.h; sourceTree = "<group>"; };
 		E9DF7B55F11B25584BD03CA9 /* Pods-cross-platform-todo-list.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cross-platform-todo-list.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cross-platform-todo-list/Pods-cross-platform-todo-list.debug.xcconfig"; sourceTree = "<group>"; };
 		EEE75C8BEC901DCC7EA5F3AC /* libPods-cross-platform-todo-list.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cross-platform-todo-list.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -300,6 +301,7 @@
 				83C4515D1EC246C20027F552 /* Assets.xcassets */,
 				83C4515F1EC246C20027F552 /* Info.plist */,
 				83C451511EC246C20027F552 /* Supporting Files */,
+				83C4517C1EC382A40027F552 /* Credentials.h */,
 			);
 			path = "TV-todo-list";
 			sourceTree = "<group>";
