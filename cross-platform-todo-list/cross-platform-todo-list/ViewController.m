@@ -24,7 +24,7 @@
 @property (strong, nonatomic) NSMutableArray *allTodos;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewControllerHeightConstraint;
 @property (weak, nonatomic) IBOutlet UITableView *todoTableView;
-@property (weak, nonatomic) IBOutlet UILabel *cellSubtitle;
+
 
 @end
 
