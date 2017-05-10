@@ -67,8 +67,9 @@
 }
 
 - (void)table:(WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex {
-    NSDictionary *currentTodoDetails = @{@"title":self.allTodos[rowIndex].title, @"content":self.allTodos[rowIndex].content};
-    [self pushControllerWithName:@"TodoDetailInterfaceController" context:currentTodoDetails];
+//    NSDictionary *currentTodoDetails = @{@"title":self.allTodos[rowIndex].title, @"content":self.allTodos[rowIndex].content};
+    TodoItem *todo = self.allTodos[rowIndex];
+    [self pushControllerWithName:@"TodoDetailInterfaceController" context:todo];
     
 }
 

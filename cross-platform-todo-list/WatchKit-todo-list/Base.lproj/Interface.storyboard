@@ -24,9 +24,6 @@
                                             </label>
                                             <label alignment="left" text="Content" minimumScaleFactor="0.0" id="aB7-rP-9L3"/>
                                         </items>
-                                        <connections>
-                                            <segue destination="rTN-un-WdR" kind="push" id="xlQ-kB-6Ba"/>
-                                        </connections>
                                     </group>
                                     <connections>
                                         <outlet property="contentLabel" destination="aB7-rP-9L3" id="Ktr-Wy-eDY"/>
@@ -53,8 +50,8 @@
                         <label width="136" alignment="left" text="Content" numberOfLines="0" id="FkJ-Y6-omC"/>
                     </items>
                     <connections>
-                        <outlet property="contentLabel" destination="FkJ-Y6-omC" id="Ccd-tv-Hgx"/>
-                        <outlet property="titleLabel" destination="VGR-ko-pCt" id="H4U-En-VLl"/>
+                        <outlet property="contentLabel" destination="FkJ-Y6-omC" id="Ccn-J0-vwx"/>
+                        <outlet property="titleLabel" destination="VGR-ko-pCt" id="rFO-ap-8C2"/>
                     </connections>
                 </controller>
             </objects>

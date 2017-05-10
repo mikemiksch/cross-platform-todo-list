@@ -12,6 +12,7 @@
 
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *titleLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *contentLabel;
+@property (strong, nonatomic) TodoItem *todo;
 
 @end
 
@@ -19,9 +20,10 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
+    self.todo = context;
     NSLog(@"%@", context);
-    [self.titleLabel setText:context[@"title"]];
-    [self.contentLabel setText:context[@"content"]];
+    [self.titleLabel setText:self.todo.title];
+    [self.contentLabel setText:self.todo.content];
     
     // Configure interface objects here.
 }

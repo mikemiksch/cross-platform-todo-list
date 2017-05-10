@@ -24,6 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.loginErrorLabel setHidden:YES];
+    [self.signupSuccessLabel setHidden:YES];
 
     
 }

@@ -12,6 +12,4 @@
 
 @interface TodoDetailInterfaceController : WKInterfaceController
 
-@property (strong, nonatomic) TodoItem *selectedItem;
-
 @end
