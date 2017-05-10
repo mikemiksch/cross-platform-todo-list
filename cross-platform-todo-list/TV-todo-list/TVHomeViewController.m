@@ -25,11 +25,20 @@
     [super viewDidLoad];
     self.tvTableView.dataSource = self;
     self.tvTableView.delegate = self;
-    [FirebaseAPI fetchAllTodos:^(NSArray<TodoItem *> *allTodos) {
+    [FirebaseAPI fetchAllTodos:self.email completion:^(NSArray<TodoItem *> *allTodos) {
         NSLog(@"All todos: %@", allTodos);
         self.allTodos = allTodos;
         self.tvTableView.reloadData;
     }];
+    if (self.allTodos == nil) {
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"No Results Found!" message:@"Are you sure you entered the correct e-mail?" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"Go back" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            //
+        }];
+        [alert addAction:action];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

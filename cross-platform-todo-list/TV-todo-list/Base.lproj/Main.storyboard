@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="tvOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +14,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="TVHomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TVHomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="TVHomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -117,7 +118,7 @@
         <!--Navigation Controller-->
         <scene sceneID="RBa-aH-2Sd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PSa-z7-atk" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="UINavigationController" automaticallyAdjustsScrollViewInsets="NO" id="PSa-z7-atk" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SOf-4Z-rVU">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
@@ -131,6 +132,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJ0-cO-aJo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-92" y="-1155"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="bT0-t7-G8K">
+            <objects>
+                <viewController id="moT-mb-cpH" customClass="TVLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U7Y-Oq-tWE"/>
+                        <viewControllerLayoutGuide type="bottom" id="znc-1d-9P8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8wh-bQ-NyQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dix-ip-ZYR">
+                                <rect key="frame" x="1" y="100" width="1920" height="179"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="150"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Well, not really. But work with us.)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEl-CC-X7O">
+                                <rect key="frame" x="1" y="287" width="1920" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Enter your email here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="orQ-Jc-XhE">
+                                <rect key="frame" x="664" y="466" width="592" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="592" id="oYE-NP-Bgc"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="se3-3w-nSW">
+                                <rect key="frame" x="836" y="568" width="250" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Faux Login"/>
+                                <connections>
+                                    <action selector="loginPressed:" destination="moT-mb-cpH" eventType="primaryActionTriggered" id="ip1-zU-zEi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="EEl-CC-X7O" firstAttribute="centerX" secondItem="Dix-ip-ZYR" secondAttribute="centerX" id="2pu-cu-UZI"/>
+                            <constraint firstItem="EEl-CC-X7O" firstAttribute="width" secondItem="Dix-ip-ZYR" secondAttribute="width" id="5Bk-aP-aS1"/>
+                            <constraint firstItem="se3-3w-nSW" firstAttribute="leading" secondItem="8wh-bQ-NyQ" secondAttribute="leadingMargin" constant="816" id="FBc-5D-QSA"/>
+                            <constraint firstItem="znc-1d-9P8" firstAttribute="top" secondItem="se3-3w-nSW" secondAttribute="bottom" constant="426" id="Lhn-uM-W37"/>
+                            <constraint firstItem="Dix-ip-ZYR" firstAttribute="width" secondItem="8wh-bQ-NyQ" secondAttribute="width" id="ObY-qm-d2i"/>
+                            <constraint firstItem="Dix-ip-ZYR" firstAttribute="top" secondItem="U7Y-Oq-tWE" secondAttribute="bottom" constant="100" id="Tuv-TI-Asq"/>
+                            <constraint firstItem="EEl-CC-X7O" firstAttribute="top" secondItem="Dix-ip-ZYR" secondAttribute="bottom" constant="8" symbolic="YES" id="XxG-bd-thi"/>
+                            <constraint firstItem="se3-3w-nSW" firstAttribute="top" secondItem="orQ-Jc-XhE" secondAttribute="bottom" constant="81" id="ehD-Wn-ACr"/>
+                            <constraint firstItem="Dix-ip-ZYR" firstAttribute="centerX" secondItem="8wh-bQ-NyQ" secondAttribute="centerX" constant="1" id="k4K-ga-IMd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="se3-3w-nSW" secondAttribute="trailing" constant="814" id="mlr-0S-sdb"/>
+                            <constraint firstItem="orQ-Jc-XhE" firstAttribute="centerX" secondItem="8wh-bQ-NyQ" secondAttribute="centerX" id="tiH-th-uqh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kz8-kd-SSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="212"/>
         </scene>
     </scenes>
 </document>
