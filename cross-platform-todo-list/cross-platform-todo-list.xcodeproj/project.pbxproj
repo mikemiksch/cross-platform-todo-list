@@ -37,6 +37,7 @@
 		83C451751EC264220027F552 /* CompletedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C451741EC264220027F552 /* CompletedViewController.m */; };
 		83C451781EC2642E0027F552 /* TodoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C451771EC2642E0027F552 /* TodoDetailViewController.m */; };
 		83C4517B1EC2763C0027F552 /* TodoDetailInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C4517A1EC2763C0027F552 /* TodoDetailInterfaceController.m */; };
+		83C4517F1EC3842F0027F552 /* FirebaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C4517E1EC3842F0027F552 /* FirebaseAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,8 @@
 		83C451791EC2763C0027F552 /* TodoDetailInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoDetailInterfaceController.h; sourceTree = "<group>"; };
 		83C4517A1EC2763C0027F552 /* TodoDetailInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoDetailInterfaceController.m; sourceTree = "<group>"; };
 		83C4517C1EC382A40027F552 /* Credentials.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Credentials.h; sourceTree = "<group>"; };
+		83C4517D1EC3842F0027F552 /* FirebaseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseAPI.h; sourceTree = "<group>"; };
+		83C4517E1EC3842F0027F552 /* FirebaseAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirebaseAPI.m; sourceTree = "<group>"; };
 		E9DF7B55F11B25584BD03CA9 /* Pods-cross-platform-todo-list.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cross-platform-todo-list.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cross-platform-todo-list/Pods-cross-platform-todo-list.debug.xcconfig"; sourceTree = "<group>"; };
 		EEE75C8BEC901DCC7EA5F3AC /* libPods-cross-platform-todo-list.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cross-platform-todo-list.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -274,16 +277,10 @@
 		83C451321EC233AB0027F552 /* WatchKit-todo-list Extension */ = {
 			isa = PBXGroup;
 			children = (
-				83C451361EC233AB0027F552 /* ExtensionDelegate.h */,
-				83C451371EC233AB0027F552 /* ExtensionDelegate.m */,
-				83C451331EC233AB0027F552 /* InterfaceController.h */,
-				83C451341EC233AB0027F552 /* InterfaceController.m */,
-				83C451471EC23F3D0027F552 /* TodoRowController.h */,
-				83C451481EC23F3D0027F552 /* TodoRowController.m */,
-				83C451391EC233AB0027F552 /* Assets.xcassets */,
-				83C4513B1EC233AB0027F552 /* Info.plist */,
-				83C451791EC2763C0027F552 /* TodoDetailInterfaceController.h */,
-				83C4517A1EC2763C0027F552 /* TodoDetailInterfaceController.m */,
+				83C451861EC3865B0027F552 /* Support */,
+				83C451851EC385800027F552 /* Model */,
+				83C451841EC385740027F552 /* View */,
+				83C451831EC385690027F552 /* Controller */,
 			);
 			path = "WatchKit-todo-list Extension";
 			sourceTree = "<group>";
@@ -291,17 +288,10 @@
 		83C451501EC246C20027F552 /* TV-todo-list */ = {
 			isa = PBXGroup;
 			children = (
-				83C451631EC248B50027F552 /* TVHomeViewController.h */,
-				83C451641EC248B50027F552 /* TVHomeViewController.m */,
-				83C451541EC246C20027F552 /* AppDelegate.h */,
-				83C451551EC246C20027F552 /* AppDelegate.m */,
-				83C4515A1EC246C20027F552 /* Main.storyboard */,
-				83C451701EC25EF70027F552 /* TVTodoDetailViewController.h */,
-				83C451711EC25EF70027F552 /* TVTodoDetailViewController.m */,
-				83C4515D1EC246C20027F552 /* Assets.xcassets */,
-				83C4515F1EC246C20027F552 /* Info.plist */,
+				83C451821EC384D70027F552 /* Controller */,
+				83C451811EC384CC0027F552 /* View */,
+				83C451801EC3843D0027F552 /* Model */,
 				83C451511EC246C20027F552 /* Supporting Files */,
-				83C4517C1EC382A40027F552 /* Credentials.h */,
 			);
 			path = "TV-todo-list";
 			sourceTree = "<group>";
@@ -309,9 +299,80 @@
 		83C451511EC246C20027F552 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				83C451541EC246C20027F552 /* AppDelegate.h */,
+				83C451551EC246C20027F552 /* AppDelegate.m */,
+				83C4515D1EC246C20027F552 /* Assets.xcassets */,
+				83C4517C1EC382A40027F552 /* Credentials.h */,
+				83C4515F1EC246C20027F552 /* Info.plist */,
 				83C451521EC246C20027F552 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83C451801EC3843D0027F552 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83C4517D1EC3842F0027F552 /* FirebaseAPI.h */,
+				83C4517E1EC3842F0027F552 /* FirebaseAPI.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		83C451811EC384CC0027F552 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83C4515A1EC246C20027F552 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		83C451821EC384D70027F552 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				83C451631EC248B50027F552 /* TVHomeViewController.h */,
+				83C451641EC248B50027F552 /* TVHomeViewController.m */,
+				83C451701EC25EF70027F552 /* TVTodoDetailViewController.h */,
+				83C451711EC25EF70027F552 /* TVTodoDetailViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		83C451831EC385690027F552 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				83C451791EC2763C0027F552 /* TodoDetailInterfaceController.h */,
+				83C4517A1EC2763C0027F552 /* TodoDetailInterfaceController.m */,
+				83C451331EC233AB0027F552 /* InterfaceController.h */,
+				83C451341EC233AB0027F552 /* InterfaceController.m */,
+				83C451471EC23F3D0027F552 /* TodoRowController.h */,
+				83C451481EC23F3D0027F552 /* TodoRowController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		83C451841EC385740027F552 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		83C451851EC385800027F552 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		83C451861EC3865B0027F552 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				83C451361EC233AB0027F552 /* ExtensionDelegate.h */,
+				83C451371EC233AB0027F552 /* ExtensionDelegate.m */,
+				83C451391EC233AB0027F552 /* Assets.xcassets */,
+				83C4513B1EC233AB0027F552 /* Info.plist */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -563,6 +624,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83C451561EC246C20027F552 /* AppDelegate.m in Sources */,
+				83C4517F1EC3842F0027F552 /* FirebaseAPI.m in Sources */,
 				83C451531EC246C20027F552 /* main.m in Sources */,
 				83C451661EC249C10027F552 /* TodoItem.m in Sources */,
 				83C451651EC248B50027F552 /* TVHomeViewController.m in Sources */,
