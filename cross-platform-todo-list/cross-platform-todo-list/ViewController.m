@@ -99,6 +99,8 @@
 - (IBAction)logOutPressed:(id)sender {
     NSError *signOutError;
     [[FIRAuth auth] signOut:&signOutError];
+    [self.allTodos removeAllObjects];
+    [self.todoTableView reloadData];
     [self checkUserStatus];
 }
 
@@ -121,6 +123,19 @@
 
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        self.userReference = [[FIRDatabase database]reference];
+        TodoItem *currentTodo = self.allTodos[indexPath.row];
+        [[[[[[self.userReference child:@"users"] child:self.currentUser.uid] child:@"todos"] child:currentTodo.key] child:@"completed"] setValue:@1];
+        [self.todoTableView reloadData];
+    }
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.allTodos count];
 }
@@ -133,11 +148,5 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    TodoDetailViewController *detailController = [[TodoDetailViewController alloc]init];
-    TodoItem *selectedItem = self.allTodos[indexPath.row];
-    detailController.selectedItem = selectedItem;
-    [self.navigationController pushViewController:detailController animated:YES];
 
-}
 @end
