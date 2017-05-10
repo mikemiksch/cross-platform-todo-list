@@ -76,7 +76,7 @@
         <!--Todo Detail View Controller-->
         <scene sceneID="BMT-vC-lka">
             <objects>
-                <viewController id="F3h-hm-l5d" customClass="TVTodoDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TVTodoDetaiLViewController" id="F3h-hm-l5d" customClass="TVTodoDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wnd-AX-qDG"/>
                         <viewControllerLayoutGuide type="bottom" id="8dx-pg-bCp"/>
@@ -86,13 +86,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tf1-82-Vla">
-                                <rect key="frame" x="867" y="176" width="187" height="117"/>
+                                <rect key="frame" x="867" y="321" width="187" height="117"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="100"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="content" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gn7-0A-2zT">
-                                <rect key="frame" x="896" y="346" width="128" height="46"/>
+                                <rect key="frame" x="896" y="491" width="128" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -106,8 +106,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="contentLabel" destination="gn7-0A-2zT" id="C1G-Vy-yud"/>
-                        <outlet property="titleLabel" destination="tf1-82-Vla" id="fuw-7S-1En"/>
+                        <outlet property="contentLabel" destination="gn7-0A-2zT" id="avF-0j-IYt"/>
+                        <outlet property="titleLabel" destination="tf1-82-Vla" id="gwU-yI-O46"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IaQ-Gm-9h7" userLabel="First Responder" sceneMemberID="firstResponder"/>

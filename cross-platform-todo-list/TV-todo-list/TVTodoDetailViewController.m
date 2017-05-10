@@ -9,6 +9,8 @@
 #import "TVTodoDetailViewController.h"
 
 @interface TVTodoDetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 
 @end
 

@@ -59,11 +59,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    TVTodoDetailViewController *detailController = [[TVTodoDetailViewController alloc]init];
-    TodoItem *selectedItem = self.allTodos[indexPath.row];
-    NSLog(@"You've selected an item! %@", selectedItem.title);
-    detailController.selectedItem = selectedItem;
-//    [self.navigationController pushViewController:detailController animated:YES];
+    TVTodoDetailViewController *detailController = [self. storyboard instantiateViewControllerWithIdentifier:@"TVTodoDetaiLViewController"];
+    detailController.selectedItem = self.allTodos[indexPath.row];
+    [self presentViewController:detailController animated:YES completion:nil];
 }
 
 @end
