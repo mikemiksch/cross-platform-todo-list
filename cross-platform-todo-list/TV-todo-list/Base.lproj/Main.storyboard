@@ -50,9 +50,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="F3h-hm-l5d" kind="show" id="Wrh-JT-LNN"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
