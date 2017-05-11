@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--InterfaceController-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="InterfaceController" id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <table alignment="left" id="RAO-5A-UIb">
+                            <items>
+                                <tableRow identifier="TodoRowController" id="nFN-Aq-1Ye" customClass="TodoRowController">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="5eq-kx-3ii">
+                                        <items>
+                                            <label alignment="left" text="Title" id="tsH-3r-N2U">
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
+                                            <label alignment="left" text="Content" minimumScaleFactor="0.0" id="aB7-rP-9L3"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="contentLabel" destination="aB7-rP-9L3" id="Ktr-Wy-eDY"/>
+                                        <outlet property="titleLabel" destination="tsH-3r-N2U" id="d6g-HH-0Xr"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="RAO-5A-UIb" id="6QW-hO-kGR"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+        <!--TodoDetailInterfaceController-->
+        <scene sceneID="U3p-Ec-nVy">
+            <objects>
+                <controller identifier="TodoDetailInterfaceController" id="rTN-un-WdR" customClass="TodoDetailInterfaceController">
+                    <items>
+                        <label width="136" alignment="left" text="Title" textAlignment="center" id="VGR-ko-pCt">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label width="136" alignment="left" text="Content" numberOfLines="0" id="FkJ-Y6-omC"/>
+                    </items>
+                    <connections>
+                        <outlet property="contentLabel" destination="FkJ-Y6-omC" id="Ccn-J0-vwx"/>
+                        <outlet property="titleLabel" destination="VGR-ko-pCt" id="rFO-ap-8C2"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="330" y="37"/>
+        </scene>
+    </scenes>
+</document>
