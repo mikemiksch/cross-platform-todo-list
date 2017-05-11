@@ -29,8 +29,8 @@
         NSLog(@"All todos: %@", allTodos);
         self.allTodos = allTodos;
         self.tvTableView.reloadData;
-    }];
-    if (self.allTodos.count >= 1) {
+
+    if (!self.allTodos.count) {
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"No Results Found!" message:@"Are you sure you entered the correct e-mail?" preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction *action = [UIAlertAction actionWithTitle:@"Go back" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -39,6 +39,7 @@
         [alert addAction:action];
         [self presentViewController:alert animated:YES completion:nil];
     }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
