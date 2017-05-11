@@ -154,35 +154,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Enter your email here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="orQ-Jc-XhE">
-                                <rect key="frame" x="668" y="502" width="592" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="592" id="oYE-NP-Bgc"/>
-                                </constraints>
-                                <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="se3-3w-nSW">
-                                <rect key="frame" x="814" y="547" width="300" height="86"/>
+                                <rect key="frame" x="810" y="584" width="300" height="86"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Faux Login"/>
                                 <connections>
                                     <action selector="loginPressed:" destination="moT-mb-cpH" eventType="primaryActionTriggered" id="ip1-zU-zEi"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Enter your email here" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="orQ-Jc-XhE">
+                                <rect key="frame" x="664" y="509" width="592" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="592" id="oYE-NP-Bgc"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="EEl-CC-X7O" firstAttribute="centerX" secondItem="Dix-ip-ZYR" secondAttribute="centerX" id="2pu-cu-UZI"/>
                             <constraint firstItem="EEl-CC-X7O" firstAttribute="width" secondItem="Dix-ip-ZYR" secondAttribute="width" id="5Bk-aP-aS1"/>
-                            <constraint firstItem="se3-3w-nSW" firstAttribute="leading" secondItem="8wh-bQ-NyQ" secondAttribute="leadingMargin" constant="794" id="FBc-5D-QSA"/>
-                            <constraint firstItem="znc-1d-9P8" firstAttribute="top" secondItem="se3-3w-nSW" secondAttribute="bottom" constant="447" id="Lhn-uM-W37"/>
+                            <constraint firstItem="se3-3w-nSW" firstAttribute="leading" secondItem="8wh-bQ-NyQ" secondAttribute="leadingMargin" constant="790" id="FBc-5D-QSA"/>
+                            <constraint firstItem="znc-1d-9P8" firstAttribute="top" secondItem="se3-3w-nSW" secondAttribute="bottom" constant="410" id="Lhn-uM-W37"/>
                             <constraint firstItem="Dix-ip-ZYR" firstAttribute="width" secondItem="8wh-bQ-NyQ" secondAttribute="width" id="ObY-qm-d2i"/>
                             <constraint firstItem="Dix-ip-ZYR" firstAttribute="top" secondItem="U7Y-Oq-tWE" secondAttribute="bottom" constant="100" id="Tuv-TI-Asq"/>
                             <constraint firstItem="EEl-CC-X7O" firstAttribute="top" secondItem="Dix-ip-ZYR" secondAttribute="bottom" constant="8" symbolic="YES" id="XxG-bd-thi"/>
-                            <constraint firstItem="se3-3w-nSW" firstAttribute="top" secondItem="orQ-Jc-XhE" secondAttribute="bottom" constant="24" id="ehD-Wn-ACr"/>
+                            <constraint firstItem="se3-3w-nSW" firstAttribute="top" secondItem="orQ-Jc-XhE" secondAttribute="bottom" constant="29" id="ehD-Wn-ACr"/>
                             <constraint firstItem="Dix-ip-ZYR" firstAttribute="centerX" secondItem="8wh-bQ-NyQ" secondAttribute="centerX" constant="1" id="k4K-ga-IMd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="se3-3w-nSW" secondAttribute="trailing" constant="786" id="mlr-0S-sdb"/>
-                            <constraint firstItem="orQ-Jc-XhE" firstAttribute="centerX" secondItem="8wh-bQ-NyQ" secondAttribute="centerX" constant="4" id="tiH-th-uqh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="se3-3w-nSW" secondAttribute="trailing" constant="790" id="mlr-0S-sdb"/>
+                            <constraint firstItem="orQ-Jc-XhE" firstAttribute="centerX" secondItem="8wh-bQ-NyQ" secondAttribute="centerX" id="tiH-th-uqh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Uve-Lj-qWQ"/>
