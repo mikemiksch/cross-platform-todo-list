@@ -9,9 +9,9 @@
 #import "InterfaceController.h"
 #import "TodoRowController.h"
 
+@import WatchConnectivity;
 
-
-@interface InterfaceController ()
+@interface InterfaceController () <WCSessionDelegate>
 
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *table;
 
@@ -40,25 +40,40 @@
     }
 }
 
-- (NSArray<TodoItem *> *)allTodos {
-    TodoItem *firstTodo = [[TodoItem alloc]init];
-    firstTodo.title = @"First Todo";
-    firstTodo.content = @"This is a todo item";
-    
-    TodoItem *secondTodo = [[TodoItem alloc]init];
-    secondTodo.title = @"Second Todo";
-    secondTodo.content = @"This is a todo item";
-    
-    TodoItem *thirdTodo = [[TodoItem alloc]init];
-    thirdTodo.title = @"Third Todo";
-    thirdTodo.content = @"This is a todo item";
-    
-    return @[firstTodo, secondTodo, thirdTodo];
-}
 
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+    
+    [[WCSession defaultSession] setDelegate:self];
+//    [[WCSession defaultSession] activateSession];
+    
+    
+    //Message parameter is wehre you want to hand the iOS app new Todo data to save to Firebase
+    [[WCSession defaultSession] sendMessage:@{} replyHandler:^(NSDictionary<NSString *,id> * _Nonnull replyMessage) {
+        
+        NSArray *todoDictionaries = replyMessage[@"todos"];
+        
+        NSMutableArray *allTodos = [[NSMutableArray alloc]init];
+        
+        for (NSDictionary *todo in todoDictionaries) {
+            NSLog(@"Looping through dictionaries");
+            TodoItem *newTodo = [[TodoItem alloc]init];
+            newTodo.title = todo[@"title"];
+            newTodo.content = todo[@"content"];
+            //Assign other values here)
+            
+            [allTodos addObject:todo];
+
+        }
+        
+        self.allTodos = allTodos.copy;
+        [self setupTable];
+        
+    } errorHandler:^(NSError * _Nonnull error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+    
 }
 
 - (void)didDeactivate {
