@@ -30,7 +30,7 @@
             
             for (NSDictionary *todoDictionary in userTodos) {
                 
-                if (self.email == todoDictionary[@"email"]) {
+                if ([email isEqualToString:todoDictionary[@"email"]]) {
                     TodoItem *newTodo = [[TodoItem alloc]init];
                     newTodo.title = todoDictionary[@"title"];
                     newTodo.content = todoDictionary[@"content"];

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TVLoginViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 
 @end

@@ -15,8 +15,6 @@
 
 @implementation TVLoginViewController
 
-@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,9 +27,9 @@
 }
 
 - (IBAction)loginPressed:(id)sender {
-    TVHomeViewController *homeView = [[TVHomeViewController alloc]init];
-    homeView.email = self.searchTextField.text;
-    [self presentViewController:homeView animated:YES completion:nil];
+    TVHomeViewController *homeView = [self.storyboard instantiateViewControllerWithIdentifier:@"TVHomeViewController"];
+    homeView.email = self.emailTextField.text;
+    [self.navigationController pushViewController:homeView animated:YES];
 }
 
 @end
